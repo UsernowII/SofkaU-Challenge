@@ -1,7 +1,7 @@
 package com.sofkau.challenge.controller;
 
 
-import com.sofkau.challenge.service.PlayerService;
+import com.sofkau.challenge.service.inter.PlayerService;
 import com.sofkau.challenge.model.Player;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

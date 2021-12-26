@@ -15,7 +15,7 @@ public class Question {
 
     @Id
     @Getter @Setter
-    private  int id;
+    private  int _id;
 
     @Getter @Setter
     private String category;
