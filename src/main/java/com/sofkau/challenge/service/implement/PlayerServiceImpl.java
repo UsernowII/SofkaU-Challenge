@@ -2,7 +2,7 @@ package com.sofkau.challenge.service.implement;
 
 import com.sofkau.challenge.dao.PlayerDao;
 import com.sofkau.challenge.model.Player;
-import com.sofkau.challenge.service.PlayerService;
+import com.sofkau.challenge.service.inter.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -2,12 +2,11 @@ package com.sofkau.challenge.controller;
 
 
 import com.sofkau.challenge.model.Question;
-import com.sofkau.challenge.service.QuestionService;
+import com.sofkau.challenge.service.inter.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,5 +26,11 @@ public class QuestionController {
     @GetMapping("/find/all")
     public List<Question> getAllQuestions(){
         return questionService.getAll();
+    }
+
+    @PostMapping("/add")
+    public ResponseEntity<Question> addPlayer(@RequestBody Question q){
+        Question question1 = questionService.save(q);
+        return new ResponseEntity<Question>(question1, HttpStatus.CREATED);
     }
 }

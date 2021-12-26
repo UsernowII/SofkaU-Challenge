@@ -1,7 +1,7 @@
 package com.sofkau.challenge.controller;
 
 
-import com.sofkau.challenge.service.PlayerService;
+import com.sofkau.challenge.service.inter.PlayerService;
 import com.sofkau.challenge.model.Player;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,5 +31,11 @@ public class PlayerController {
     @GetMapping("/find/{id}")
     public Player readPlayer(@PathVariable String id){
         return playerService.getPlayerId(id);
+    }
+
+    @PutMapping("/add")
+    public ResponseEntity<Player> editPlayer(@RequestBody Player p){
+        Player player1 = playerService.save(p);
+        return new ResponseEntity<Player>(player1, HttpStatus.ACCEPTED);
     }
 }

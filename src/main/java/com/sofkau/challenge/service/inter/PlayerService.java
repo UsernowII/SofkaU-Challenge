@@ -1,4 +1,4 @@
-package com.sofkau.challenge.service;
+package com.sofkau.challenge.service.inter;
 
 import com.sofkau.challenge.model.Player;
 
