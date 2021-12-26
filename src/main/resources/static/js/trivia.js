@@ -5,8 +5,8 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 
-let question;
-let posibleQuestions;
+let currentQuestion;
+let posibleQuestions = [];
 let data;
 let rounds = 1;
 let countRound;
@@ -33,14 +33,23 @@ async function triviaData(){
 
 
 function selectQuestion(n){
-    let question1 = data[n]
-    document.getElementById("category").innerHTML = question1.category;
+    currentQuestion = data[n]
+    document.getElementById("category").innerHTML = currentQuestion.category;
     document.getElementById("score").innerHTML = score;
-    document.getElementById("question").innerHTML = question1.question;
-    document.getElementById("answer1").innerHTML = question1.answer;
-    document.getElementById("answer2").innerHTML = question1.wrongAnswer1;
-    document.getElementById("answer3").innerHTML = question1.wrongAnswer2;
-    document.getElementById("answer4").innerHTML = question1.wrongAnswer3;
+    document.getElementById("question").innerHTML = currentQuestion.question;
+
+    posibleQuestions = [
+        currentQuestion.answer,
+        currentQuestion.wrongAnswer1,
+        currentQuestion.wrongAnswer2,
+        currentQuestion.wrongAnswer3
+    ];
+
+    posibleQuestions.sort( ()=> Math.random() - 0.5 );
+    document.getElementById("answer1").innerHTML = posibleQuestions[0];
+    document.getElementById("answer2").innerHTML = posibleQuestions[1];
+    document.getElementById("answer3").innerHTML = posibleQuestions[2];
+    document.getElementById("answer4").innerHTML = posibleQuestions[3];
 
 }
 
@@ -78,17 +87,14 @@ function countRounds(){
     return rounds;
 }
 
-function scrambleAnswers(question){
-    posibleQuestions = [
-        question.answer,
-        question.wrongAnswer1,
-        question.wrongAnswer2,
-        question.wrongAnswer3
-        ];
-
-    posibleQuestions.sort( ()=> Math.random() - 0.5 );
-    document.getElementById("answer1").innerHTML = posibleQuestions[0];
-    document.getElementById("answer2").innerHTML = posibleQuestions[1];
-    document.getElementById("answer3").innerHTML = posibleQuestions[2];
-    document.getElementById("answer4").innerHTML = posibleQuestions[3];
+function btnAction(index){
+    console.log(currentQuestion.answer);
+    if(posibleQuestions[index] === currentQuestion.answer){
+        selectQuestionRandom();
+    }else{
+        alert("respuesta equivocada")
+    }
 }
+
+
+

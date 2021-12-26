@@ -11498,6 +11498,7 @@ header.masthead .masthead-heading {
   max-width: 100vw;
 }
 .portfolio-modal .modal-content {
+  transition: all 0.3s;
   padding-top: 6rem;
   padding-bottom: 6rem;
   text-align: center;
@@ -11538,6 +11539,20 @@ header.masthead .masthead-heading {
   height: 2.75rem;
 }
 
+
+.answer{
+    margin-bottom: 5px;
+
+}
+
+.answer:hover{
+    /*background: #fff4cc;*/
+    background: orange;
+    cursor: pointer;
+    transform: scale(1.07);
+
+
+}
 
 .footer {
   text-align: center;
