@@ -32,4 +32,10 @@ public class PlayerController {
     public Player readPlayer(@PathVariable String id){
         return playerService.getPlayerId(id);
     }
+
+    @PutMapping("/add")
+    public ResponseEntity<Player> editPlayer(@RequestBody Player p){
+        Player player1 = playerService.save(p);
+        return new ResponseEntity<Player>(player1, HttpStatus.ACCEPTED);
+    }
 }

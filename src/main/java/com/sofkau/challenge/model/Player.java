@@ -18,10 +18,7 @@ public class Player {
     private  String id;
 
     @Getter @Setter
-    private String usuario;
-
-    @Getter @Setter
-    private int lvlId;
+    private String user;
 
     @Getter @Setter
     private double totalScore;

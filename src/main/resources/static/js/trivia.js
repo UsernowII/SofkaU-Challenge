@@ -8,14 +8,17 @@ window.addEventListener('DOMContentLoaded', event => {
 let currentQuestion;
 let posibleQuestions = [];
 let data;
-let rounds = 1;
-let countRound;
-let score = 0;
+let rounds =1;
+let countRound = 1;
+let reward = 0;
+let score = 0 ;
+
+let user = {};
 
 
 async function triviaData(){
 
-
+    await findUser(1);
 
     const request = await fetch('api/trivia/find/all', {
         method: 'GET',
@@ -26,7 +29,9 @@ async function triviaData(){
     });
 
     data = await request.json();
+    console.log(user);
     selectQuestionRandom();
+
 
 }
 
@@ -35,7 +40,7 @@ async function triviaData(){
 function selectQuestion(n){
     currentQuestion = data[n]
     document.getElementById("category").innerHTML = currentQuestion.category;
-    document.getElementById("score").innerHTML = score;
+    document.getElementById("score").innerHTML = reward;
     document.getElementById("question").innerHTML = currentQuestion.question;
 
     posibleQuestions = [
@@ -54,46 +59,67 @@ function selectQuestion(n){
 }
 
 function selectQuestionRandom(){
-    //selectQuestion(Math.floor((Math.random()* data.length)/n) );
-    selectQuestion(Math.floor((Math.random()* data.length) ));
-}
+    if(countRound === 1){
+        switch (rounds) {
+            case 1: rounds = 1;
+                selectQuestion(Math.floor(Math.random() *5));
+                console.log(currentQuestion.answer);
+                rounds++;
+                reward += 10;
+                break;
+            case 2: rounds = 2;
+                selectQuestion(Math.floor((Math.random()* (10-5) +5)));
+                console.log(currentQuestion.answer);
+                rounds++;
+                reward += 10;
+                break;
+            case 3: rounds = 3;
+                selectQuestion(Math.floor((Math.random()* (15-10) +10)));
+                console.log(currentQuestion.answer);
+                rounds++;
+                reward += 10;
+                break;
+            case 4 : rounds = 4;
+                selectQuestion(Math.floor((Math.random()* (20-15) +15)));
+                console.log(currentQuestion.answer);
+                rounds++;
+                reward += 10;
+                break
+            case 5 : rounds = 5;
+                selectQuestion(Math.floor((Math.random()* (25-20) +20)));
+                console.log(currentQuestion.answer);
+                reward += 10;
+                console.log(reward);
+                rounds++;
+                break
+            case 6: rounds = 6;
+                document.getElementById("score").innerHTML = reward;
+                alert("Felicitaciones! ..Juego completado","success")
+                rounds++
+                reward = 50;
+                break;
+            default:
+                location.reload();
 
-function countRounds(){
-
-    switch (rounds) {
-        case 1: rounds = 1;
-                selectQuestion(Math.floor((Math.random()* (1-5)) ));
-                rounds++;
-            break;
-        case 2: rounds = 2;
-                selectQuestion(Math.floor((Math.random()* (6-10)) ));
-                rounds++;
-            break;
-        case 3: rounds = 3;
-                selectQuestion(Math.floor((Math.random()* (11-15)) ));
-                rounds++;
-            break;
-        case 4 : rounds = 4;
-                selectQuestion(Math.floor((Math.random()* (16-20)) ));
-                rounds++;
-            break
-        case 5 : rounds = 5;
-                selectQuestion(Math.floor((Math.random()* (21-25)) ));
-                rounds++;
-            break
+        }
 
     }
-    console.log(rounds)
-    return rounds;
+
+    console.log(countRound);
+    console.log(reward)
+    return reward;
+
 }
 
+
 function btnAction(index){
-    console.log(currentQuestion.answer);
     if(posibleQuestions[index] === currentQuestion.answer){
         selectQuestionRandom();
     }else{
         alert("Lo siento! ..repuesta incorrecta","danger")
-        //setTimeout(back , 1000);
+        setTimeout( () =>{
+            location.reload()
+        } , 1000);
 
     }
 }
@@ -111,9 +137,42 @@ function alert(message, type) {
 
 }
 
-function back(){
-    location.reload();
+async function exitModal() {
+    console.log(countRound);
+    console.log(reward)
+    //uploadScoreUser().then(r => location.reload() );
+    await uploadScoreUser();
+
 }
 
+async function findUser(n){
+
+    const request = await fetch('api/score/find/'+n, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        }
+    });
+
+    user = await request.json();
+
+}
+
+async function uploadScoreUser(){
+
+    user.totalScore = user.totalScore + (reward -10);
+
+    const request = await fetch('api/score/add', {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(user)
+    });
 
 
+
+
+}
