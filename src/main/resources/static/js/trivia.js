@@ -93,13 +93,14 @@ function selectQuestionRandom(){
                 rounds++;
                 break
             case 6: rounds = 6;
+                reward = 50;
                 document.getElementById("score").innerHTML = reward;
                 alert("Felicitaciones! ..Juego completado","success")
                 rounds++
-                reward = 50;
+                reward = 60;
                 break;
             default:
-                location.reload();
+                exitModal().then();
 
         }
 
@@ -118,7 +119,7 @@ function btnAction(index){
     }else{
         alert("Lo siento! ..repuesta incorrecta","danger")
         setTimeout( () =>{
-            location.reload()
+            exitModal().then();
         } , 1000);
 
     }
@@ -140,8 +141,8 @@ function alert(message, type) {
 async function exitModal() {
     console.log(countRound);
     console.log(reward)
-    //uploadScoreUser().then(r => location.reload() );
-    await uploadScoreUser();
+    uploadScoreUser().then(r => location.reload() );
+
 
 }
 

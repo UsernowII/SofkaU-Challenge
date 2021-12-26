@@ -22,7 +22,7 @@ async function loadStats(){
     for (let p of players) {
 
         let playerHtml = '<tr class="table-warning"><th scope="row">'+ p.id
-            +'</th> <td>' + p.usuario + '</td> <td>' + p.totalScore + '</td> <td>Trivia</td></tr>';
+            +'</th> <td>' + p.user + '</td> <td>' + p.totalScore + '</td> <td>Trivia</td></tr>';
 
         listHtml+= playerHtml;
     }
