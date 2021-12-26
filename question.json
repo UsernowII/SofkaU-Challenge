@@ -1,0 +1,226 @@
+[{
+  "_id": 1,
+  "category": "Arte",
+  "question": "¿Quién pintó la mona lisa?",
+  "answer": "Leonardo da Vinci",
+  "wrongAnswer1": "Picasso",
+  "wrongAnswer2": "Miguel Ángel",
+  "wrongAnswer3": "Monet",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 2,
+  "category": "Arte",
+  "question": "compuso la famosa canción 'Bohemian Rhapsody'",
+  "answer": "Freddie Mercury",
+  "wrongAnswer1": "Ozzy Osbourne",
+  "wrongAnswer2": "El Charrito Negro",
+  "wrongAnswer3": "Steven Tyler",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 3,
+  "category": "Arte",
+  "question": "Género teatral intermedio entre la comedia y la tragedia",
+  "answer": "Drama",
+  "wrongAnswer1": "Suspenso",
+  "wrongAnswer2": "Novela",
+  "wrongAnswer3": "Poesía",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 4,
+  "category": "Arte",
+  "question": "Arte japonés de la papiroflexia.",
+  "answer": "Origami",
+  "wrongAnswer1": "Haiku",
+  "wrongAnswer2": "Ikebana",
+  "wrongAnswer3": "Supuku",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 5,
+  "category": "Arte",
+  "question": "Animal que queria ser domesticado por El Principito",
+  "answer": "Zorro",
+  "wrongAnswer1": "Conejo",
+  "wrongAnswer2": "Perro",
+  "wrongAnswer3": "Paloma",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 6,
+  "category": "Ciencia",
+  "question": "¿Cómo debería estar una persona para que le fuera practicada una autopsia?",
+  "answer": "Muerta",
+  "wrongAnswer1": "En coma",
+  "wrongAnswer2": "Inconsciente",
+  "wrongAnswer3": "Dormido",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 7,
+  "category": "Ciencia",
+  "question": "Los Elefantes...",
+  "answer": "Barritan",
+  "wrongAnswer1": "Gritan",
+  "wrongAnswer2": "Gruñen",
+  "wrongAnswer3": "Hablan",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 8,
+  "category": "Ciencia",
+  "question": "¿De qué color es la sangre de los peces?",
+  "answer": "Rojo",
+  "wrongAnswer1": "Verde Oscuro",
+  "wrongAnswer2": "Azul",
+  "wrongAnswer3": "Marrón",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 9,
+  "category": "Ciencia",
+  "question": "¿Cuál es el hueso más pequeño del cuerpo?",
+  "answer": "El Estribo",
+  "wrongAnswer1": "El Yunque",
+  "wrongAnswer2": "Cráneo",
+  "wrongAnswer3": "La Falange",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 10,
+  "category": "Ciencia",
+  "question": "¿Qué causa furor en Internet?",
+  "answer": "Los Gatos",
+  "wrongAnswer1": "Los Ratones",
+  "wrongAnswer2": "Los Gansos",
+  "wrongAnswer3": "Los Perros",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 11,
+  "category": "Matemática",
+  "question": "¿qué es 3,1415926535897…?",
+  "answer": "PI",
+  "wrongAnswer1": "PIH",
+  "wrongAnswer2": "CHI",
+  "wrongAnswer3": "Ninguna de las anteriores",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 12,
+  "category": "Matemática",
+  "question": "Famoso por una manzana que cayó en su cabeza",
+  "answer": "Isaac Newton",
+  "wrongAnswer1": "G Leibniz",
+  "wrongAnswer2": "M Agnesi",
+  "wrongAnswer3": "Lex Luthor",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 13,
+  "category": "Matemática",
+  "question": "Calcula a estos cuatro nueves (99-9)/9",
+  "answer": "10",
+  "wrongAnswer1": "9",
+  "wrongAnswer2": "8",
+  "wrongAnswer3": "90",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 14,
+  "category": "Matemática",
+  "question": "Los números que pueden escribirse como la razón de dos enteros se denominan... ",
+  "answer": "Racionales",
+  "wrongAnswer1": "Enteros",
+  "wrongAnswer2": "Imaginarios",
+  "wrongAnswer3": "Flotantes",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 15,
+  "category": "Matemática",
+  "question": "La hipotenusa es igual a la raíz de la suma de los catetos al cuadrado",
+  "answer": "Teorema de Pitágoras",
+  "wrongAnswer1": "Teorema de Tales",
+  "wrongAnswer2": "Teorema de Pascuales",
+  "wrongAnswer3": "Teorema del Triangulin",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 16,
+  "category": "Deportes",
+  "question": "¿Cuántos puntos valen un tiro libre encestado en baloncesto?",
+  "answer": "Uno",
+  "wrongAnswer1": "Dos",
+  "wrongAnswer2": "Tres",
+  "wrongAnswer3": "Ninguno",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 17,
+  "category": "Deportes",
+  "question": "¿Cómo se llama la cantera del FC Barcelona?",
+  "answer": "La Masía",
+  "wrongAnswer1": "El Chalet",
+  "wrongAnswer2": "La Fábrica",
+  "wrongAnswer3": "La Depuradora",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 18,
+  "category": "Deportes",
+  "question": "¿Qué país es campeón del mundo de balonmano masculino del 2013?",
+  "answer": "España",
+  "wrongAnswer1": "Hungría",
+  "wrongAnswer2": "Alemania",
+  "wrongAnswer3": "Reino Unido",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 19,
+  "category": "Deportes",
+  "question": "¿Quién ganó cuatro mundiales consecutivos de Fórmula 1?",
+  "answer": "Sebastian Vettel",
+  "wrongAnswer1": "Fernando Alonso",
+  "wrongAnswer2": "Kimi Raikkonen",
+  "wrongAnswer3": "Barry Allen",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 20,
+  "category": "Historia",
+  "question": "¿En qué año se celebraron los primeros juegos olímpicos de verano, en Atenas?",
+  "answer": "1896",
+  "wrongAnswer1": "1986",
+  "wrongAnswer2": "1992",
+  "wrongAnswer3": "1753",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 21,
+  "category": "Historia",
+  "question": "¿Qué Imperio se disolvió, después de 846 años, el 6 de agosto de 1806?",
+  "answer": "El Sacro Imperio Romano Germánico",
+  "wrongAnswer1": "El Imperio Dorado De Los Incas",
+  "wrongAnswer2": "El Imperio Bizantino",
+  "wrongAnswer3": "El Imperio de Disney",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 22,
+  "category": "Historia",
+  "question": "El cristianismo y el islamismo son las religiones más extendidas en el mundo. ¿Cuál es la siguiente?",
+  "answer": "El Hinduismo",
+  "wrongAnswer1": "El Budismo",
+  "wrongAnswer2": "Las Religiones Indígenas",
+  "wrongAnswer3": "La Religión Tradicional China",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 23,
+  "category": "Historia",
+  "question": "¿Cuántos meses duró la Batalla de Moscú, que tuvo lugar durante la Segunda Guerra Mundial?",
+  "answer": "Tres",
+  "wrongAnswer1": "Cuatro",
+  "wrongAnswer2": "Ocho",
+  "wrongAnswer3": "Cinco",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 24,
+  "category": "Historia",
+  "question": "¿Qué otro nombre recibió el período de la Gran Hambruna China?",
+  "answer": "Todas Son Correctas",
+  "wrongAnswer1": "Tres Años De Desastres Naturales",
+  "wrongAnswer2": "Tres Años De Dificultades Económicas",
+  "wrongAnswer3": "Tres Años Amargos",
+  "_class": "com.sofkau.challenge.model.Question"
+},{
+  "_id": 25,
+  "category": "Historia",
+  "question": "¿Cuántos soldados argentinos murieron en la Guerra de las Malvinas?",
+  "answer": "649",
+  "wrongAnswer1": "987",
+  "wrongAnswer2": "225",
+  "wrongAnswer3": "0 pollitos",
+  "_class": "com.sofkau.challenge.model.Question"
+}]

@@ -1,0 +1,11 @@
+[{
+  "_id": "1",
+  "user": "usernow",
+  "totalScore": 0,
+  "_class": "com.sofkau.challenge.model.Player"
+},{
+  "_id": "2",
+  "user": "Oscar Raniz",
+  "totalScore": 325,
+  "_class": "com.sofkau.challenge.model.Player"
+}]
