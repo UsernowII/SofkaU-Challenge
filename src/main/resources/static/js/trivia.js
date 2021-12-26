@@ -26,33 +26,27 @@ async function triviaData(){
     });
 
     data = await request.json();
-    console.log(data)
-
-
-
     selectQuestionRandom();
 
 }
 
 
 
-function selectQuestion(id){
-
-    question = data[id];
-    //console.log(question);
-    document.getElementById("category").innerHTML = question.category;
+function selectQuestion(n){
+    let question1 = data[n]
+    document.getElementById("category").innerHTML = question1.category;
     document.getElementById("score").innerHTML = score;
-    document.getElementById("question").innerHTML = question.question;
-    document.getElementById("answer1").innerHTML = question.answer;
-    document.getElementById("answer2").innerHTML = question.wrongAnswer1;
-    document.getElementById("answer3").innerHTML = question.wrongAnswer2;
-    document.getElementById("answer4").innerHTML = question.wrongAnswer3;
+    document.getElementById("question").innerHTML = question1.question;
+    document.getElementById("answer1").innerHTML = question1.answer;
+    document.getElementById("answer2").innerHTML = question1.wrongAnswer1;
+    document.getElementById("answer3").innerHTML = question1.wrongAnswer2;
+    document.getElementById("answer4").innerHTML = question1.wrongAnswer3;
 
 }
 
-function selectQuestionRandom(n){
+function selectQuestionRandom(){
     //selectQuestion(Math.floor((Math.random()* data.length)/n) );
-    selectQuestion(Math.floor((Math.random()* (-n)-n)) );
+    selectQuestion(Math.floor((Math.random()* data.length) ));
 }
 
 function countRounds(){
